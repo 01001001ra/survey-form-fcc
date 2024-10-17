@@ -106,32 +106,3 @@
     </main>
 </body>
 </html>
-
-
-<!-- 991
-
-function replaceDigit(x, digitToReplace, replacement) {
-  let remainingDigits = x; // 1
-  // Track the place value of every new digit.
-  let placeValue = 1; // 1
-  let newNumber = 0; // 1
-  // While there are original digits left:
-  while (remainingDigits > 0) { // for every digit in x
-    // Get the last digit.
-    let lastDigit = remainingDigits % 10; // 1
-    // If the current digit needs replacing:
-    if (lastDigit === digitToReplace) { // 1
-        // Append the replacement.
-        newNumber = replacement * placeValue + newNumber; // 1 or 0
-    // Otherwise:
-    } else {
-        // Add the current lastDigit.
-        newNumber = lastDigit * placeValue + newNumber; // 1 or 0
-    }
-    placeValue = placeValue * 10; // 1 
-    // Remove lastDigit from the remaining original.
-    remainingDigits = (remainingDigits - lastDigit) / 10; // 1
-  }
-  // Return result.
-  return newNumber; // 1
-}
