@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library Reader Survey</title>
+</head>
+<body>
+    <img class="logo" src="https://www.booketybookbooks.co.nz/cdn/shop/files/bookclubstack.png?v=1721796595&width=840" alt="Book Club Logo" />
+    <main>
+        <h1 id="title">Library Book Club Reader Survey</h1>
+        <p id="description">We’d love to hear your thoughts about our library book club! Please take a moment to answer these quick questions:</p>
+        <form id="survey-form" method="post" action="https://old-library-survey.com">
+            <fieldset class="name-fields">
+                <label id="name-label" for="name">Your name:
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </label>
+                <label id="number-label" for="number">Your library card:
+                    <input type="number" id="number" name="number" placeholder="Enter your card ID" required min="1" max="999999999">
+                </label>
+                <label id="email-label" for="email">Your Email:
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Membership type (required)</legend>
+                <label for="student-account">
+                    <input id="student-account" type="radio" name="membership-type" value="student" required>Student
+                </label>
+                <label for="resident-account">
+                    <input id="resident-account" type="radio" name="membership-type" value="community" required>Community Resident
+                </label>
+            </fieldset>
+            
+            <fieldset class="genre-section">
+                <legend>Select your favourite book genres:</legend>
+                <label for="fiction">Fiction
+                    <input type="checkbox" id="fiction" name="genre" value="fiction" checked>
+                </label>
+                <label for="non-fiction">Non-fiction
+                    <input type="checkbox" id="non-fiction" name="genre" value="non-fiction">
+                </label>
+                <label for="sci-fi">Sci-fi
+                    <input type="checkbox" id="sci-fi" name="genre" value="sci-fi">
+                </label>
+                <label for="thriller">Mystery/Thriller
+                    <input type="checkbox" id="thriller" name="genre" value="thriller">
+                </label>
+                <label for="other-genre">Other
+                    <input type="checkbox" id="other-genre" name="genre" value="other">
+                </label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>What is your age group?</legend>
+                <label for="underage">
+                    <input type="radio" id="underage" name="age-group" value="underage" required>Under 18
+                </label>
+                <label for="young-adult">
+                    <input type="radio" id="young-adult" name="age-group" value="young-adult" required>18-25
+                </label>
+                <label for="adult">
+                    <input type="radio" id="adult" name="age-group" value="adult" required>Above 25
+                </label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>What book would you like to see as the next book club pick?</legend>
+                <textarea id="comments" name="comments" placeholder="Enter your suggestions" maxlength="200"></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <label for="dropdown">When can you attend our next book club meeting?</label>
+                <select name="dates" id="dropdown">
+                    <option value="">--Please choose an option--</option>
+                    <option value="sat">Saturday 19 Oct</option>
+                    <option value="mon">Monday 21 Oct</option>
+                    <option value="tue">Tuesday 22 Oct</option>
+                </select>
+            </fieldset>
+            
+            <fieldset class="stars">
+                <legend>How would you rate our library services?</legend>
+                <label for="excellent">
+                    <input type="radio" id="excellent" name="service-rating" value="5" required>&#11088;&#11088;&#11088;&#11088;&#11088;
+                </label>
+                <label for="good">
+                    <input type="radio" id="good" name="service-rating" value="4" required>&#11088;&#11088;&#11088;&#11088;
+                </label>
+                <label for="fair">
+                    <input type="radio" id="fair" name="service-rating" value="3" required>&#11088;&#11088;&#11088;
+                </label>
+                <label for="needs-improvement">
+                    <input type="radio" id="needs-improvement" name="service-rating" value="2" required>&#11088;&#11088; and less
+                </label>
+            </fieldset>
+            <p id="bottom-text">Thank you for being our valuable library member!</p>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
+
+
+<!-- 991
+
+function replaceDigit(x, digitToReplace, replacement) {
+  let remainingDigits = x; // 1
+  // Track the place value of every new digit.
+  let placeValue = 1; // 1
+  let newNumber = 0; // 1
+  // While there are original digits left:
+  while (remainingDigits > 0) { // for every digit in x
+    // Get the last digit.
+    let lastDigit = remainingDigits % 10; // 1
+    // If the current digit needs replacing:
+    if (lastDigit === digitToReplace) { // 1
+        // Append the replacement.
+        newNumber = replacement * placeValue + newNumber; // 1 or 0
+    // Otherwise:
+    } else {
+        // Add the current lastDigit.
+        newNumber = lastDigit * placeValue + newNumber; // 1 or 0
+    }
+    placeValue = placeValue * 10; // 1 
+    // Remove lastDigit from the remaining original.
+    remainingDigits = (remainingDigits - lastDigit) / 10; // 1
+  }
+  // Return result.
+  return newNumber; // 1
+}

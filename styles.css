@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gaegu', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+}
+
+body {
+    background-color: #E8F6F1; 
+    align-items: center;
+    padding: 50px 20px;
+    min-height: 100vh;
+}
+
+
+main {
+    background-color: #fff;
+    padding: 40px;
+    margin: 30px auto 0px auto;
+    border-radius: 12px;
+    max-width: 1200px;  
+    width: 100%;  
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);  
+    text-align: center;
+    box-sizing: border-box;  
+} 
+
+h1#title {
+    font-size: 1.8rem;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    font-family: 'Chewy', system-ui;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+p#description, p#bottom-text {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    text-align: left;
+}
+fieldset {
+    border: none;
+}
+fieldset.name-fields {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+fieldset.name-fields label {
+    flex: 1;
+    margin-right: 10px;
+}
+fieldset.name-fields input {
+    margin-top: 15px; 
+}
+
+fieldset.name-fields label:last-child {
+    margin-right: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #2C3E50;
+    background-color: #f8f9fa;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}
+
+.genre-section > label {
+    display: block;
+}
+.stars {
+    text-align: center;
+    margin: 50px;
+}
+
+fieldset.checkbox-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+fieldset.checkbox-group label {
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+button#submit {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+    font-size: 1rem;
+    background-color: #f85a16;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#submit:hover {
+    background-color: #e67e22;
+}
+
+.logo{
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
